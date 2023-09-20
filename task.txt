@@ -1,0 +1,38 @@
+1 - What is prune fetch?
+- 1. git fetch -prune The git fetch -prune <remote> command deletes all the objets that are not reachable from the git remote repository.
+  2. git remote prune origin The git remote prune origin command deletes all the unreachable objects from the remote repository but it doesn't fetch them.
+  3. The Git prune command is used to delete all the files that are not reachable from the current branch. 
+  4. Unreachable objects are objects that are inaccessible from any of the available references. 
+  5. The primary use of the Git prune command is to clean the working directory after we finish the work on the project. 
+  6. If an object or commit is no more reachable from the current branch, the git prune command will delete that object or commit from the working directory.
+  Commands
+	Let us look at the Git prune commands and their usage.
+	git fetch -prune The git fetch -prune <remote> command deletes all the objects that are not reachable from the git remote repository.
+	git remote prune origin The git remote prune origin command deletes all the unreachable objects from the remote repository but it doesn't fetch them.
+	git config -global fetch.prune true The git config -global fetch.
+	prune true command is used to configure git to prune the remote repository when we fetch it.
+
+2 - what is squash?
+-  	Git squash is a feature that allows developers to simplify the tree structure of a Git repository by merging multiple sequential commits. 
+	The process involves choosing a base commit and merging all the changes from the sequential commits into the selected one.
+	Squashing produces one base commit which contains changes from several selected commits.
+	
+3 - what is interactive interface of squash?
+- 	The first thing you need to do is to tell Git how far back you want to rebase. 
+	So if you want to squash all those commits in the new-feature branch together, you need to go back 6 commits. 
+	Now, you need to replace all those pick with squash (or simply s ) apart from the first one.
+	
+4 - What is merge conflicts ?
+-	A git merge conflict is an event that takes place when Git is unable to automatically resolve differences in code between two commits. 
+	Git can merge the changes automatically only if the commits are on different lines or branches.
+	
+5 - how to resolve it merge conflicts?
+- 	There are a few steps that could reduce the steps needed to resolve merge conflicts in Git.
+
+Step 1: The easiest way to resolve a conflicted file is to open it and make any necessary changes.
+
+Step 2: After editing the file, we can use the git add a command to stage the new merged content.
+
+Step 3: The final step is to create a new commit with the help of the git commit command.
+
+Step 4: Git will create a new merge commit to finalize the merge. 
